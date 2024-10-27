@@ -2,7 +2,7 @@
 
 ### **Introduction**
 
-This repository contains a neural network model developed using PyTorch for classifying iris species based on their sepal and petal measurements. The model is trained on the classic Iris dataset, a widely used benchmark for machine learning tasks.
+This repository contains a neural network model developed using PyTorch for classifying iris species based on their sepal and petal measurements. The model is trained on the classic Iris dataset, a widely used benchmark for machine learning tasks.The neural network is a simple two-layer fully connected feedforward model built with PyTorch.
 
 ### **Dataset**
 
@@ -15,7 +15,26 @@ The dataset used for training and evaluation is the Iris dataset, which consists
 
 ### **Model Architecture**
 
-The neural network model is a [specify the architecture, e.g., sequential model with hidden layers, dropout, activation functions, etc.]. The model is trained using [specify optimization algorithm, loss function, and metrics].
+Here's a sample description of the model architecture you can use for your README:
+
+---
+
+### Model Architecture
+
+1. **Input Layer**: The model takes an input tensor of shape `(batch_size, 4)`, where 4 represents the number of input features.
+   
+2. **Hidden Layer**:
+   - **Fully Connected Layer**: The first layer, `linear1`, maps the input of size 4 to an output of size 32.
+   - **Activation Function**: A Sigmoid activation function is applied to introduce non-linearity, allowing the model to capture more complex relationships in the data.
+
+3. **Output Layer**:
+   - **Fully Connected Layer**: The second layer, `linear2`, maps the 32-dimensional input from the hidden layer to a 3-dimensional output, which represents the number of classes in the classification task.
+   
+4. **Loss Function**: CrossEntropyLoss is used as the loss function, suitable for multi-class classification.
+   
+5. **Optimizer**: Stochastic Gradient Descent (SGD) is used for optimization, with a learning rate of 0.02.
+
+**Training Setup**: The model is trained in mini-batches of size 16, with data shuffled at each epoch to improve generalization.
 
 ### **Usage**
 
